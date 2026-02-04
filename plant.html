@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Page Title</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+        .logo {
+
+            font-size: 48px;
+             font-weight: bold;
+            color: #2b5202;
+            text-decoration: none;
+
+        }
+
+        body {
+
+            font-family: Arial;
+
+            margin: 0;
+
+        }
+
+
+
+        /* Header */
+
+        .introduction {
+            
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(
+                rgba(0,0,0,0.45),
+                 rgba(0,0,0,0.45)
+              ), url("media/about.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .introduction h1 {
+            font-size: 48px;
+        }
+
+        .introduction p {
+            font-size: 20px;
+        }
+
+        .about {
+             
+              padding: 60px;
+        }
+
+        /* Top navigation bar */
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #2b5202;
+        }
+
+
+        /* Navigation bar links */
+
+        .navbar a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+
+
+        /* Change color on hover */
+
+        .navbar a:hover {
+            background: #e7f3e3;
+            color: #2b5202;
+        }
+
+
+
+        /* Column container */
+
+        .container {
+
+            display: flex;
+            gap: 30px;
+            padding: 40px;
+
+        }
+
+
+
+        /* Sidebar/left column */
+
+        .side {
+
+            flex: 25%;
+
+            background: white;
+             padding: 25px;
+            border-radius: 12px;
+
+        }
+
+        h2 {
+        margin-bottom: 20px;
+        border-left: 5px solid #2b5202;
+        padding-left: 10px;
+    }
+
+        /* Main column */
+
+        .main {
+            flex: 75%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+
+        .plant {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+       .plant:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+        }
+
+        .plant img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .plant-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .plant-info h3 {
+            font-size: 20px;
+        }
+        /* Fake image, just for this example */
+
+        .plant-info p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2b5202;
+        }
+
+        /* Button Styling */
+
+        button {
+            background: #2b5202;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.3s;}
+
+            button:hover {
+                background: #3d7306;
+            }
+
+       
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            margin-top: 40px;
+            padding: 30px;
+            text-align: center;
+            background: #2b5202;
+            color: white;
+        }
+
+            /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 700px) {
+            .container {
+             flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Note -->
+    <div style="background:white;padding:30px;text-align:left; font-size:40px; color:black;">
+
+        <a href="#" class="logo">GreenLeaf <span>Nursery</span></a>
+
+    </div>
+
+
+
+    <!-- Header -->
+
+    <header class="introduction" id="home">
+<div class="about">
+    <div class="intro">
+        <h1>Bring Nature Into Your Home</h1>
+
+        <p>Healthy Indoor Plants for a Fresh Life</p>
+        </div>
+</div>
+    </header>
+
+
+
+    <!-- Navigation Bar -->
+
+    <div class="navbar">
+
+        <a href="#home">Home</a>
+
+        <a href="#plants">Indoor Plants</a>
+
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+
+
+    <!-- Content Container -->
+
+    <div class="container" id="about">
+
+        <div class="side">
+
+            <h2>About Us</h2>
+
+            <h5>Photo of me:</h5>
+
+            <div class="fakeimg" style="height:200px; width: 200px;;">
+                <img src="media/plant.jpg" alt="Indoor Plants" width="100%" height="100%">
+            </div>
+
+            <p>Welcome to GreenLeaf Nursery, your local haven for healthy, home-grown indoor plants. We believe that bringing a little
+            bit of nature indoors can transform your living space and improve your well-being.</p>
+
+            <br><br>
+
+            <p>Our plants are grown with love using eco-friendly practices, ensuring they are free from harmful chemicals and ready to
+            thrive in your home. Whether you are a beginner or a seasoned plant parent, we have something green for you.</p>
+
+
+        </div>
+
+
+        <div style="flex:75%">
+            <h2>Our Best Selling Plants</h2>
+       
+        <div class="main" id="plants">  
+          <div class="plant">
+            <div class="fakeimg" style="height:200px;">
+                <img src="media/indoor1.jpg" alt="Indoor Plants" width="100%" height="100%">
+            </div>
+            <div class="plant-info">
+                <h3>Snake Plant</h3>
+                <p>Rs 499</p>
+                <button>Buy Now</button>
+            </div>
+            </div>
+
+            <div class="plant">
+            <div class="fakeimg" style="height:200px;">
+                <img src="media/indoor2.jpg" alt="Indoor Plants" width="100%" height="100%">    
+            </div>
+            <div class="plant-info">
+                <h3>Peace Lily</h3>
+                <p>Rs 699</p>
+                <button>Buy Now</button>
+            </div>
+            </div>
+
+            <div class="plant">
+            <div class="fakeimg" style="height:200px;">
+                <img src="media/indoor3.jpg" alt="Indoor Plants" width="100%" height="100%">    
+            </div>
+            <div class="plant-info">
+                <h3>Spider Plant</h3>
+                <p>Rs 399</p>
+                <button>Buy Now</button>    
+            </div>
+            </div>
+
+            <div class="plant">
+            <div class="fakeimg" style="height:200px;"> 
+                <img src="media/indoor4.jpg" alt="Indoor Plants" width="100%" height="100%">
+            </div>
+            <div class="plant-info">
+                <h3>Fiddle Leaf Fig</h3>
+                <p>Rs 999</p>
+                <button>Buy Now</button>    
+            </div>
+            </div>
+
+            <div class="plant">
+            <div class="fakeimg" style="height:200px;">
+                <img src="media/indoor5.jpg" alt="Indoor Plants" width="100%" height="100%">
+            </div>
+            <div class="plant-info">
+                <h3>Aloe Vera</h3>
+                <p>Rs 299</p>
+                <button>Buy Now</button>
+            </div>
+            </div>
+
+            <div class="plant">
+            <div class="fakeimg" style="height:200px;">
+                <img src="media/indoor6.jpg" alt="Indoor Plants" width="100%" height="100%">
+            </div>
+            <div class="plant-info">
+                <h3>ZZ Plant</h3>
+                <p>Rs 599</p>
+                <button>Buy Now</button>
+            </div>
+            </div>
+
+            <div class="plant">
+            <div class="fakeimg" style="height:200px;"> 
+                <img src="media/indoor7.jpg" alt="Indoor Plants" width="100%" height="100%">
+            </div>
+            <div class="plant-info">
+                <h3>Money Plant</h3>
+                <p>Rs 799</p>
+                <button>Buy Now</button>
+            </div>
+            </div>
+            <br>
+
+           
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <footer id="contact">
+
+        <h2>Contact Us</h2>
+        <p>Email: info@greenleafnursery.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+        <p>Address: 123 Green St, Plant City, PC 12345</p>  
+
+
+    </footer>
+
+
+
+</body>
+
+</html>
